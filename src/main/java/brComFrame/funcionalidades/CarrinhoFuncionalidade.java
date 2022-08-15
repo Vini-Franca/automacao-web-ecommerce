@@ -19,22 +19,41 @@ public class CarrinhoFuncionalidade extends BaseTest {
 
     public void Login() {
         user.getLoginBtn().click();
-        user.getEmail().sendKeys("teste003@teste.com.br");
+        user.getEmail().sendKeys("teste005@teste.com.br");
         user.getPassword().sendKeys("teste123");
         user.getSubmitLogin().click();
     }
 
     public void addCart() {
-        user.getTshirts().click();
+        user.getWomenProduct().click();
         user.getTshirtProduct().click();
         user.getSetColor().click();
         user.getSetSize().click();
         user.getAddToCart().click();
     }
 
+    public void addDress() {
+        user.getWomenProduct().click();
+        user.getDresses().click();
+        user.getDressesProduct().click();
+        user.getSetColorDresses().click();
+        user.getSetQty().click();
+        user.getSetSizeDresses().click();
+        user.getAddToCart().click();
+    }
+
+    public void addBlouse() {
+        user.getWomenProduct().click();
+        user.getTops().click();
+        user.getBlouse().click();
+        user.getBlouseProduct().click();
+        user.getSetQty().click();
+        user.getSetQty().click();
+        user.getAddToCart().click();
+    }
+
     public void MsgCart(){
         user.getCartConfirm().getText().equals("Product successfully added to your shopping cart");
-
     }
 
 

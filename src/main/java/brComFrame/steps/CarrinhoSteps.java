@@ -36,5 +36,14 @@ public class CarrinhoSteps {
         this.cart.MsgCart();
     }
 
+    @Quando("adiciono um vestido ao carrinho")
+    public void adicionoUmVestidoAoCarrinho() {
+        this.cart.addDress();
+    }
+
+    @Quando("adiciono uma blusa ao carrinho")
+    public void adicionoUmaBlusaAoCarrinho() {
+        this.cart.addBlouse();
+    }
 }
 

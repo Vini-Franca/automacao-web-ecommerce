@@ -30,6 +30,13 @@ Funcionalidade: Cadastrar e logar usuário
     Quando clico em Sign Out
     Entao devo ser redirecionado a página inicial
 
+  @newsletter
+  Cenario: Realizar cadastro na Newsletter
+    Dado que estou na página inicial
+    E faço o login com minhas credenciais
+    Quando preencho com meu email o campo Newsletter
+    E clico para enviar
+    Entao devo visualizar o texto "Newsletter : You have successfully subscribed to this newsletter."
 
 
 

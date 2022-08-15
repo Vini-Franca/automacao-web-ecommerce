@@ -73,6 +73,15 @@ public class CadastroPage {
     @FindBy(id = "SubmitLogin")
     private WebElement submitLogin;
 
+    @FindBy(xpath = "//input[@id='newsletter-input']")
+    private WebElement newsletterInput;
+
+    @FindBy(xpath = "//button[@name='submitNewsletter']")
+    private WebElement newsletterButton;
+
+    @FindBy(xpath = "(//*[contains(text(),'Newsletter : You have successfully subscribed to this newsletter.')])[2]")
+    private WebElement newsletterConfirm;
+
 
 
 
@@ -86,6 +95,18 @@ public class CadastroPage {
 
     public CadastroPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
+    }
+
+    public WebElement getNewsletterConfirm() {
+        return newsletterConfirm;
+    }
+
+    public WebElement getNewsletterInput() {
+        return newsletterInput;
+    }
+
+    public WebElement getNewsletterButton() {
+        return newsletterButton;
     }
 
     public WebElement getConfirmAccount() {

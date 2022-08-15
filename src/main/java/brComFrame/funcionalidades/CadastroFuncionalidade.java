@@ -20,11 +20,11 @@ public class CadastroFuncionalidade extends BaseTest {
 
     public void SignupUser() throws InterruptedException {
         user.getLogin().click();
-        user.getEmailCreate().sendKeys("teste003@teste.com.br");
+        user.getEmailCreate().sendKeys("teste005@teste.com.br");
         user.getSubmitCreate().click();
         user.getTitle().click();
-        user.getFirstname().sendKeys("Azure");
-        user.getLastname().sendKeys("Hopkins");
+        user.getFirstname().sendKeys("João");
+        user.getLastname().sendKeys("Gomes");
         user.getPassword().sendKeys("teste123");
         user.getDay().click();
         user.getMonth().click();
@@ -43,13 +43,25 @@ public class CadastroFuncionalidade extends BaseTest {
     }
 
     public void Credentials() {
-        user.getEmail().sendKeys("teste003@teste.com.br");
+        user.getEmail().sendKeys("teste005@teste.com.br");
         user.getPassword().sendKeys("teste123");
         user.getSubmitLogin().click();
     }
 
     public void LogoutBtn() {
         user.getLogoutBtn().click();
+    }
+
+    public void NewsletterEmail() {
+        user.getNewsletterInput().sendKeys("teste005@teste.com.br");
+    }
+
+    public void NewsletterButton() {
+        user.getNewsletterButton().click();
+    }
+
+    public void NewsletterConfirm() {
+        user.getNewsletterConfirm().getText();
     }
 
     public void LoginConfirm(String confirm) {

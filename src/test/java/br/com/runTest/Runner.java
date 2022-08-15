@@ -16,7 +16,7 @@ import java.io.IOException;
 @CucumberOptions(plugin = {"summary", "pretty", "html:target/report/report.html", "json:target/report/cucumber.json"},
         features = {"resources/Features"},
         glue = {"brComFrame/steps",},
-        tags = "@carrinho")
+        tags = "@usuario")
 
 
 public class Runner {

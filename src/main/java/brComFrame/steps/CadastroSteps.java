@@ -72,5 +72,20 @@ public class CadastroSteps {
     public void devoSerRedirecionadoAPáginaInicial() {
         queEstouNaPáginaInicial();
     }
+
+    @Quando("preencho com meu email o campo Newsletter")
+    public void preenchoComMeuEmailOCampoNewsletter() {
+        this.user.NewsletterEmail();
+    }
+
+    @E("clico para enviar")
+    public void clicoParaEnviar() {
+        this.user.NewsletterButton();
+    }
+
+    @Entao("devo visualizar o texto {string}")
+    public void devoVisualizarOTexto(String arg0) {
+        this.user.NewsletterConfirm();
+    }
 }
 
