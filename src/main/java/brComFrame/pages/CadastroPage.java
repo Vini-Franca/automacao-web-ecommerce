@@ -82,6 +82,13 @@ public class CadastroPage {
     @FindBy(xpath = "(//*[contains(text(),'Newsletter : You have successfully subscribed to this newsletter.')])[2]")
     private WebElement newsletterConfirm;
 
+    @FindBy(xpath = "//*[contains(text(),'Invalid email address.')]")
+    private WebElement invalidEmail;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger']//child::p")
+    private WebElement invalidForm;
+
+
 
 
 
@@ -99,6 +106,14 @@ public class CadastroPage {
 
     public WebElement getNewsletterConfirm() {
         return newsletterConfirm;
+    }
+
+    public WebElement getInvalidForm() {
+        return invalidForm;
+    }
+
+    public WebElement getInvalidEmail() {
+        return invalidEmail;
     }
 
     public WebElement getNewsletterInput() {

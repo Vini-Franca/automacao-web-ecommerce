@@ -76,5 +76,26 @@ public class CadastroFuncionalidade extends BaseTest {
         user.getConfirmAccount().getText();
     }
 
+    public void emailValidation() {
+        user.getEmailCreate().sendKeys("");
+        user.getSubmitCreate().click();
+    }
+
+    public void emailValidationMsg(String msgEmail) {
+        user.getInvalidEmail().getText();
+    }
+
+    public void invalidForm(String arg0) {
+        user.getInvalidForm().getText().contains(arg0);
+
+    }
+
+    public void validEmail() {
+        user.getEmailCreate().sendKeys("teste010@teste.com.br");
+        user.getSubmitCreate().click();
+    }
+
+
+
 
 }
